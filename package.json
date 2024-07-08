@@ -1,0 +1,23 @@
+{
+  "name": "modulo-22-exercicio",
+  "version": "1.0.0",
+  "description": "Exercício de padrões de projeto em automação de testes E2E",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "open": "npx cypress open"
+  },
+  "keywords": [
+    "automacao",
+    "automation",
+    "cypress",
+    "design",
+    "pattern"
+  ],
+  "author": "Humberto Gouveia",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "cypress": "^13.13.0"
+  }
+}
