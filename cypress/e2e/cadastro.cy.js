@@ -31,4 +31,22 @@ describe("Testes automatizados na Ebac Store", () => {
     homePage.abrirMenuInformandoOpcao("Account")
     profilePage.customerName().should("contain", `${lastName} ${firstName}`)
   })
+
+
+  it("CT.002 - Realizar cadastro de usuário informando meus dados utilizando Page Object", () => {
+    
+    homePage.abrirMenuInformandoOpcao("Account")
+    loginPage.acessarCadastro()
+    cadastroPage.cadastro({
+      firstName: 'Insira o primeiro nome',
+      lastName: 'Insira o último nome',
+      phoneNumber: faker.phone.number(),
+      emailAddress: 'Insira um email',
+      password: 'Crie uma senha',
+      rePassword: 'Insira a mesma senha criada',
+    })
+
+    homePage.abrirMenuInformandoOpcao("Account")
+    profilePage.customerName().should("contain", `${lastName} ${firstName}`)
+  })
 })

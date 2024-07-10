@@ -40,6 +40,7 @@ export const cadastroPage = {
         this.rePassword.type(rePassword)
         this.botaoCreate.click()
     }
+
 };
 
 module.exports = { cadastroPage };
