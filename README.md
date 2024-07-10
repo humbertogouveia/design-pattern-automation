@@ -1,4 +1,4 @@
-# design pattern na automatomação de teste
+# Design pattern na automatomação de teste
 Framework: Cypress.io
 
 <p>Após aprendermos como automatizar um fluxo da aplicação é importante definir qual o padrão de projeto que se deve utilizar.
