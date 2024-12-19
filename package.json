@@ -1,0 +1,17 @@
+{
+  "name": "modulo-23-cypress-intercept",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "sudo npx cypress run",
+    "open": "sudo npx cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cypress": "^13.13.2",
+    "dotenv": "^16.4.5"
+  }
+}

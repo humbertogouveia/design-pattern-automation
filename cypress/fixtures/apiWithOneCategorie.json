@@ -1,0 +1,54 @@
+[
+{
+    "success": true,
+    "categories": [
+        {
+            "_id": "66b4cffd07423f2f18c282df",
+            "name": "Trees",
+            "photo": "https://www.gstatic.com/webp/gallery/1.webp",
+            "createdAt": "2024-08-08T14:02:37.538Z",
+            "updatedAt": "2024-08-08T14:02:37.538Z",
+            "__v": 0
+        },
+        {
+            "_id": "66b3f6d207423f2f18c27dde",
+            "name": "Nova Categoria Teste",
+            "createdAt": "2024-08-07T22:36:02.506Z",
+            "updatedAt": "2024-08-07T22:36:02.506Z",
+            "__v": 0
+        },
+        {
+            "_id": "66b13c5107423f2f18c2783a",
+            "name": "Produto Kelvin",
+            "createdAt": "2024-08-05T20:55:45.461Z",
+            "updatedAt": "2024-08-05T20:55:45.461Z",
+            "__v": 0
+        },
+        {
+            "_id": "66aabadf07423f2f18c24489",
+            "name": "any",
+            "photo": "any",
+            "createdAt": "2024-07-31T22:29:51.972Z",
+            "updatedAt": "2024-07-31T22:29:51.972Z",
+            "__v": 0
+        },
+        {
+            "_id": "668d683ab9a638eebe8ae2d3",
+            "name": "Clothes",
+            "photo": "http://lojaebac.ebaconline.art.br/lojaebac/lojaebac/clothes1_1-1720543290104.webp",
+            "createdAt": "2024-07-09T16:41:30.438Z",
+            "updatedAt": "2024-07-09T16:41:30.438Z",
+            "__v": 0
+        },
+        {
+            "_id": "668d6831b9a638eebe8ae2d1",
+            "name": "Shoes",
+            "photo": "http://lojaebac.ebaconline.art.br/lojaebac/lojaebac/shoes1_1-1720543281073.webp",
+            "createdAt": "2024-07-09T16:41:21.579Z",
+            "updatedAt": "2024-07-09T16:41:21.579Z",
+            "__v": 0
+        }
+    ],
+    "totalCategory": 6
+}
+]
