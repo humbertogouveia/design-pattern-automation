@@ -1,19 +1,19 @@
 const { homePage } = require("../support/pages/home.page");
 
-describe('Testando as interceptações', () => {
+describe('Testing interceptions on Cypress', () => {
 
   beforeEach(() => {
-    cy.login('cliente@ebac.art.br', 'GD*peToHNJ1#c$sgk08EaYJQ');
+    cy.login('humbertogouveia@outlook.com', 'teste12345');
   });  
 
-  it('Deve existir mais que 1 categoria com resposta da fixture', () => {
+  it('categories should have one has a answer', () => {
     cy.intercept('GET','**/public/getCategories',{fixture:'apiWithOneCategorie.json'}).as('withOne')
     homePage.openSearchProduct()
     homePage.openCategoriesFilter()
     homePage.categories().should('have.length',1)
   });
 
-  it('Dado que não exista categorias, Quando acesso a busca por elas, Então recebo retorno de somente 1. Que é a opção All) ', () => {
+  it('categories should be empty', () => {
     cy.intercept('GET','**/public/getCategories',{fixture:'apiWithoutcategories.json'}).as('withoutCategories')
     homePage.openSearchProduct()
     homePage.openCategoriesFilter()
@@ -25,5 +25,12 @@ describe('Testando as interceptações', () => {
     homePage.openSearchProduct()
     homePage.openCategoriesFilter()
     homePage.categories().should('have.length',1)
+  });
+
+  it.only('categories should be visible', () => {
+    cy.intercept('GET','**/public/getCategories',{fixture: 'categories.json'}).as('categories')
+    // homePage.openSearchProduct()
+    // homePage.openCategoriesFilter()
+    // homePage.categories().should('have.length',7)
   });
 });

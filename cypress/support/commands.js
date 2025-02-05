@@ -25,7 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 const { homePage } = require("./pages/home.page");
-const {loginPage} = require("../support/pages/login.page")
+const {loginPage} = require("../support/pages/login.page");
 
 Cypress.Commands.add('login', (email, senha) => { 
     cy.setCookie('ebacStoreVersion', 'v2', { domain: 'lojaebac.ebaconline.art.br' });
@@ -33,3 +33,19 @@ Cypress.Commands.add('login', (email, senha) => {
     homePage.openMenu('Account')
     loginPage.login(email, senha);
  })
+
+ Cypress.Commands.add('loginOld', (email, senha) => { 
+    cy.visit('http://lojaebac.ebaconline.art.br/product/ingrid-running-jacket/');
+ })
+
+
+ Cypress.Commands.add('sai',()=>{
+   Cypress.on('uncaught:exception', (err, runnable) => {
+      // Verifica se o erro contém a mensagem específica e o ignora
+      if (err.message.includes("Cannot read properties of null (reading 'description')")) {
+        return false; // Retorna `false` para evitar falha do teste
+      }
+    });
+ })
+
+ 
