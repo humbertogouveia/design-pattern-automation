@@ -3,18 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run && open TestReport/Report.html",
     "open": "npx cypress open",
-    "report": "npm run mergeJsonReport && generateReport",
+    "test": "npx cypress run && open TestReport/Report.html",
+    "test mochaReport": "npx cypress run && npm run mochaReport",
+    "mochaReport": "npm run merge && npm run generateReport && open mochawesome-report/[]-result.html",
     "merge": "npx mochawesome-merge ./mochawesome-report/*.json -o result.json",
     "generateReport": "npx marge ./mochawesome-report/*.json -o ./mochawesome-report"
   },
-  "keywords": [],
+  "keywords": ["automacao","cypress","testes","quality-assurance"],
   "author": "Humberto Gouveia",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cypress": "^13.13.2",
+    "cypress": "^13.17.0",
     "cypress-html-reporter": "^11.0.0",
     "dotenv": "^16.4.5"
   },
