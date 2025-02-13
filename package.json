@@ -3,15 +3,23 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "sudo npx cypress run",
-    "open": "sudo npx cypress open"
+    "test": "npx cypress run && open TestReport/Report.html",
+    "open": "npx cypress open",
+    "report": "npm run mergeJsonReport && generateReport",
+    "merge": "npx mochawesome-merge ./mochawesome-report/*.json -o result.json",
+    "generateReport": "npx marge ./mochawesome-report/*.json -o ./mochawesome-report"
   },
   "keywords": [],
-  "author": "",
+  "author": "Humberto Gouveia",
   "license": "ISC",
   "description": "",
   "dependencies": {
     "cypress": "^13.13.2",
+    "cypress-html-reporter": "^11.0.0",
     "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0"
   }
 }

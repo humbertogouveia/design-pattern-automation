@@ -2,15 +2,22 @@ const { defineConfig } = require("cypress");
 require('dotenv').config()
 
 module.exports = defineConfig({
+
+  retries: {
+    runMode: 1
+  },
+
   e2e: {
-    // baseUrl: 'http://lojaebac.ebaconline.art.br/',
+    video: true,
     baseUrl:'http://lojaebac.ebaconline.art.br',
     setupNodeEvents(on, config) {
       // implement node event listeners here
+      require('cypress-html-reporter/GenerateReport')(on, config)
     },
-    env:{
-      MY_ENV: process.env.MY_ENV,
-      ebacStoreVersion: process.env.ebacStoreVersion
-    }
   },
+  reporter: 'mochawesome',
+  reporterOptions: {
+    reportFilename: "[]-result",
+    html: false
+  }
 });

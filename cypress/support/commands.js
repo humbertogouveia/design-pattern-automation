@@ -48,4 +48,29 @@ Cypress.Commands.add('login', (email, senha) => {
     });
  })
 
+ Cypress.Commands.add('addAndUpdateErrorIntercept',()=>{
+   cy.intercept('POST', '/carrinho/', (req) => {
+      if (req.body.includes('Update Cart')) {  
+        req.reply({
+          statusCode: 500,
+          body: { error: "Erro interno no servidor" },
+        })
+      } else if (req.body.includes('add')) {
+        req.reply({
+          statusCode: 500,
+          body: { error: "Erro interno no servidor" },
+        })
+      }
+    }).as('add_or_update_product')
+ })
+
+ Cypress.Commands.add('removeProductErrorIntercept',()=>{
+
+   cy.intercept('GET', '/carrinho/?remove_item*', { statusCode: 500 }).as('postRemoveItem');
+
+   cy.visit('http://lojaebac.ebaconline.art.br/product/ingrid-running-jacket/')
+   cy.scrollTo('top', {duration:1000})
+
+ })
+
  
