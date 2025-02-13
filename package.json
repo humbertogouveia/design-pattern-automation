@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "open": "npx cypress open",
-    "test": "npx cypress run && open TestReport/Report.html",
-    "test mochaReport": "npx cypress run && npm run mochaReport",
+    "test cy:report": "npx cypress run && open TestReport/Report.html",
+    "test cy:mochaReport": "npx cypress run && npm run mochaReport",
     "mochaReport": "npm run merge && npm run generateReport && open mochawesome-report/[]-result.html",
     "merge": "npx mochawesome-merge ./mochawesome-report/*.json -o result.json",
     "generateReport": "npx marge ./mochawesome-report/*.json -o ./mochawesome-report"
