@@ -3,14 +3,18 @@ cypress/downloads/
 cypress/screenshots/
 cypress/videos/
 cypress/results/
+cypress/reports/
 TestReport/
 mochawesome-report/
 
 # Dependências
 node_modules/
+package-lock.json
+yarn.lock
 
 # Arquivos de ambiente
 .env
+.env.*
 .env.local
 
 # Arquivos de sistema
@@ -20,3 +24,4 @@ Thumbs.db
 # Logs e relatórios
 *.log
 *.tmp
+result.json
