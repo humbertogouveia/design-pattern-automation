@@ -15,6 +15,7 @@ Framework: Cypress.io
 - Abra Visual Studio Code (ou outra IDE) e abra uma pasta para o projeto
 - Acesse o terminal dentro do VS Code
 - Realize um Git Clone desse projeto
+- Execute o comando no terminal ```npm i```, para instalarmos todas as dependências necessárias para executarmos nossos testes
 
 Para executar e ver os relatórios com mochawesome:
 
